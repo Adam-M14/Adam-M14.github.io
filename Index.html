@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="Main.css" />
+    <title> Adam's Fanpage</title>
+    <script>
+      function banner(){
+      var text = confirm("Did You Really Want to Click on My Banner?");
+      return text;
+      }
+      
+      function answer(){
+        var radio = document.getElementsByName("trivia");
+        var selection = false;
+        var message = "";
+        for( var i = 0; i < radio.length; i++) {
+        if(radio[i].value == "yes" && radio[i].checked == true) {
+          selection = true;
+          } //end if statement
+        } //end for loop
+        
+        if(selection == true) {
+          message = message + "<b><p style='color:green'>Correct!</p></b>";
+        } else {
+        message = message + "<b><p style='color:red'>Try again.</p></b>";
+        }
+        document.getElementById("response").innerHTML = message;
+
+       } //end function answer
+    </script>
+  </head>
+  <body id="background">
+    
+    <a onclick="return banner()" href="https://www.chesskid.com/play/online">
+    <header id="banner"> <center><span class="wrap-text">This is a website made by Adam.</span></center> </header>
+    </a>
+    
+    <nav>
+      <ul id="navmenu">
+  <li> <a href="Home.html"> Home </a> </li>
+  <li> <a href="Games.html"> Games </a> </li>
+  <li> <a href="Videos.html"> Videos </a> </li>
+      </ul>
+      <div class="rightside">
+      <p style="color:firebrick"></p>
+      </div>
+      <div class="leftside">
+      
+      </div>
+      <div class="clearfloat"></div>
+    </nav>
+    
+    <h1> This is my Fanpage</h1>
+    
+  <p>
+  This a  <u>website</u> for all my <b>fans</b>! I will post <i>stuff</i> about me on this website.
+  </p>
+  
+  <center><h2>Adam Trivia Question</h2></center>
+  
+    <center><p class="paragraph">What is my favorite Roblox Game?</p></center>
+  <div class="wrap-trivia">
+    <form>
+      <div id="response"></div>
+      <input type="radio" name="trivia" value="no"> Emergency Response Libery County <br>
+      <input type="radio" name="trivia" value="yes"> Entry Point <br>
+      <input type="radio" name="trivia" value="no"> Hellmet <br>
+      <input type="radio" name="trivia" value="no"> The Butchery <br>
+      <input onclick="answer()" type="button" value="Click Here" id="button">
+    </form>
+  </div>
+  
+  <div class="wrap-list">
+   <ol>
+    <li class="listitem">I will post cool facts about me.</li>
+    <li class="listitem">I might put some pictures on this website later on.</li>
+    <li class="listitem">This will be a cool website when I'm finished.</li>
+   </ol>
+  </div>
+
+  <img src="https://www.gccscamps.com/images/navlogo.png" alt="Grove City Christian Camps"/>
+  <img width="70%" src="https://imagescdn.homes.com/i2/gQVpfRUKbeFyLwKJpDxB8rZbB0Ro3VdWt0RjyiLgom0/111/grove-city-christian-school-grove-city-oh-2-schoolphoto.jpg?p=1" alt="Grove City Christian School, Grove City OH Rankings &amp; Reviews - Homes.com"/>
+  
+  <audio width="400" height="220" controls autoplay>
+   <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+  </audio>
+
+ <hr />
+ 
+ <center> <a href="https://www.grovecitychristian.org/">My School</a> </center>
+ 
+ <video width="400" height="220" controls autoplay>
+<source src="http://www.w3schools.com/HTML/mov_bbb.mp4" type="video/mp4">
+<source src="http://www.w3schools.com/HTML/mov_bbb.ogg" type="video/ogg">
+</video>
+ 
+  <footer id="footer"> Thank you for viewing my website!</footer>
+ </body>
+</html>
